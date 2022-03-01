@@ -1,5 +1,6 @@
 import React from 'react'
-type Player = "X" | "O"| null
+import { Player } from '../containers/Board'
+
 type SquareProps = {
     value :Player;
     winner:Player;

@@ -34,3 +34,12 @@ code {
 p {
   font-size: 2rem;
 }
+.reset {
+  margin-top: 2rem;
+  font-size: 2rem;
+  background-color: aqua;
+  border: none;
+  border-radius: 6px;
+  padding: 1rem;
+  cursor: pointer;
+}
