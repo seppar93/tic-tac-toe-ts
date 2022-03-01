@@ -8,7 +8,7 @@ export const Board = () => {
     )
     const [winner, setWinner] = useState(null)
 
-    const setSquareValue = (index) => {
+    const setSquareValue = (index:number) => {
         // set the value of the square to the current player
         const newData = squares.map((value, idx) => {
             if(index === idx) {
@@ -19,14 +19,14 @@ export const Board = () => {
         setSquares(newData)
         setCurrentPlayer(currentPlayer === "X" ? "O": "X")
     }
-    
+
   return (
     <div>Current Player is {currentPlayer}
     {Array(9).fill(null).map((_, idx) => {
         // dont use index as they may change
         return <Square key={idx}
         onClick={() => setSquareValue(idx) }
-        value={squares}
+        value={squares[idx]}
         winner={winner}
         />
     })
